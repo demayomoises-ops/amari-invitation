@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8e8ef">
+<title>Amari Yuki Albino Demayo | Baptism & 1st Birthday</title>
+<style>
+  :root {
+    --pink: #f7e5ed;
+    --pink-deep: #b65d7d;
+    --rose: #8f3d5a;
+    --gold: #b9944b;
+    --gold-light: #e4cf9a;
+    --cream: #fffaf5;
+    --ink: #49333c;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    background: var(--cream);
+  }
+  .hero {
+    min-height: 94svh; display: grid; place-items: center; text-align: center;
+    padding: 28px 18px; position: relative; overflow: hidden;
+    background:
+      radial-gradient(ellipse at 12% 15%, #fff8fb 0, transparent 36%),
+      radial-gradient(ellipse at 88% 85%, #f1d3df 0, transparent 40%),
+      linear-gradient(145deg, #f8e8ef, #fffaf5 56%, #f4e0e8);
+  }
+  .hero::before, .hero::after {
+    content: "✿"; position: absolute; color: #c9a65d; opacity: .32; font-size: 9rem;
+  }
+  .hero::before { top: 2%; left: -2%; transform: rotate(-20deg); }
+  .hero::after { bottom: 1%; right: -2%; transform: rotate(24deg); }
+  .hero-inner { max-width: 680px; position: relative; z-index: 1; }
+  .eyebrow { text-transform: uppercase; letter-spacing: .25em; font: 11px/1.8 Arial,sans-serif; color: var(--rose); }
+  h1 { font-size: clamp(2.5rem, 9vw, 5.2rem); line-height: 1.04; font-weight: 400; margin: 20px 0 12px; color: var(--rose); }
+  .subtitle { font-size: clamp(1.15rem, 4vw, 1.65rem); color: var(--gold); font-style: italic; }
+  .ornament { color: var(--gold); letter-spacing: .5em; margin: 24px 0; }
+  .date-line { font: 600 13px/1.8 Arial,sans-serif; letter-spacing: .18em; text-transform: uppercase; }
+  .open-btn, .submit-btn {
+    display: inline-block; border: 1px solid var(--gold); border-radius: 999px;
+    padding: 13px 27px; margin-top: 25px; color: white; background: var(--rose);
+    font: 12px Arial,sans-serif; letter-spacing: .12em; text-transform: uppercase;
+    text-decoration: none; cursor: pointer; transition: .2s;
+  }
+  .open-btn:hover, .submit-btn:hover { background: #713047; transform: translateY(-1px); }
+  section { padding: 65px 18px; }
+  .section-inner { max-width: 760px; margin: auto; text-align: center; }
+  .section-label { color: var(--gold); text-transform: uppercase; letter-spacing: .22em; font: 11px Arial,sans-serif; }
+  h2 { font-weight: 400; color: var(--rose); font-size: clamp(2rem, 7vw, 3rem); margin: 12px 0 22px; }
+  p { line-height: 1.8; }
+  .intro { background: #fffaf5; }
+  .intro .message { max-width: 560px; margin: auto; font-size: 1.1rem; }
+  .details { background: linear-gradient(#fffaf5, #f8e8ef); }
+  .detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 15px; margin-top: 30px; }
+  .detail-card {
+    border: 1px solid #e4cf9a; background: rgba(255,255,255,.72);
+    border-radius: 18px; padding: 24px 15px; min-width: 0;
+  }
+  .detail-card .symbol { color: var(--gold); font-size: 1.7rem; }
+  .detail-card h3 { color: var(--rose); font-size: 1.3rem; font-weight: 400; margin: 12px 0; }
+  .detail-card p { margin: 5px 0; font: 13px/1.7 Arial,sans-serif; }
+  .countdown { background: var(--rose); color: #fffaf5; }
+  .countdown h2 { color: #fffaf5; }
+  .countdown .section-label { color: var(--gold-light); }
+  .timer { display: flex; justify-content: center; gap: clamp(10px, 4vw, 30px); margin-top: 25px; }
+  .time-unit strong { display: block; font-size: clamp(2rem, 7vw, 3.3rem); font-weight: 400; color: var(--gold-light); }
+  .time-unit span { font: 10px Arial,sans-serif; letter-spacing: .15em; text-transform: uppercase; }
+  .rsvp { background: #fffaf5; }
+  form { max-width: 520px; margin: 28px auto 0; text-align: left; }
+  label { display: block; margin: 15px 0 7px; font: 12px Arial,sans-serif; letter-spacing: .04em; }
+  input, select, textarea {
+    width: 100%; padding: 13px 14px; border: 1px solid #e3ccd5; border-radius: 10px;
+    background: white; color: var(--ink); font: 15px Arial,sans-serif;
+  }
+  input:focus, select:focus, textarea:focus { outline: 2px solid #d8a6b9; border-color: transparent; }
+  .submit-btn { width: 100%; margin-top: 22px; }
+  .form-note { font: 12px/1.6 Arial,sans-serif; color: #806a73; text-align: center; margin-top: 12px; }
+  #response { margin-top: 16px; text-align: center; color: var(--rose); line-height: 1.7; }
+  footer { background: #f4e0e8; padding: 28px 15px; text-align: center; color: var(--rose); font-size: 13px; }
+  @media (max-width: 520px) {
+    .detail-grid { grid-template-columns: 1fr; }
+    .detail-card { padding: 20px; }
+    section { padding: 52px 16px; }
+  }
+</style>
+</head>
+<body>
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div class="eyebrow">A little blessing • A big celebration</div>
+    <div class="ornament">✧ ❀ ✧</div>
+    <p class="subtitle">Please join us for the</p>
+    <h1>Amari Yuki<br>Albino Demayo</h1>
+    <p class="subtitle">Baptism &amp; 1st Birthday</p>
+    <div class="ornament">──────── ✦ ────────</div>
+    <div class="date-line">Saturday • December 19, 2026</div>
+    <a class="open-btn" href="#invitation">Open Invitation</a>
+  </div>
+</header>
+
+<section class="intro" id="invitation">
+  <div class="section-inner">
+    <div class="section-label">With love and gratitude</div>
+    <h2>A Day to Remember</h2>
+    <p class="message">With grateful hearts, we invite you to celebrate the baptism and first birthday of our precious little one, <strong>Amari Yuki Albino Demayo</strong>. Your presence will make this joyful day even more special. We can’t wait to celebrate with you!</p>
+    <div class="ornament">✧ ❀ ✧</div>
+  </div>
+</section>
+
+<section class="details" id="details">
+  <div class="section-inner">
+    <div class="section-label">Save the date</div>
+    <h2>Celebration Details</h2>
+    <div class="detail-grid">
+      <article class="detail-card">
+        <div class="symbol">✝</div>
+        <h3>The Baptism</h3>
+        <p><strong>St. Peter</strong></p>
+        <p>Commonwealth</p>
+        <p>December 19, 2026</p>
+        <p>Please confirm the ceremony time with the family.</p>
+      </article>
+      <article class="detail-card">
+        <div class="symbol">♡</div>
+        <h3>Birthday Reception</h3>
+        <p><strong>Jollibee Commonwealth</strong></p>
+        <p>December 19, 2026</p>
+        <p>Please confirm the party time with the family.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="countdown">
+  <div class="section-inner">
+    <div class="section-label">The celebration is coming</div>
+    <h2>Counting Down to Amari’s Big Day</h2>
+    <div class="timer" aria-live="polite">
+      <div class="time-unit"><strong id="days">--</strong><span>Days</span></div>
+      <div class="time-unit"><strong id="hours">--</strong><span>Hours</span></div>
+      <div class="time-unit"><strong id="minutes">--</strong><span>Minutes</span></div>
+      <div class="time-unit"><strong id="seconds">--</strong><span>Seconds</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="rsvp" id="rsvp">
+  <div class="section-inner">
+    <div class="section-label">Kindly respond</div>
+    <h2>Will You Join Us?</h2>
+    <p>We would be delighted to celebrate with you. Please let us know if you can make it.</p>
+    <form id="rsvpForm">
+      <label for="guestName">Your full name *</label>
+      <input id="guestName" name="guestName" autocomplete="name" required placeholder="Enter your name">
+      <label for="attendance">Will you attend? *</label>
+      <select id="attendance" name="attendance" required>
+        <option value="">Please choose</option>
+        <option value="Joyfully accepts">Yes, joyfully accepts!</option>
+        <option value="Regretfully declines">Sorry, unable to attend</option>
+      </select>
+      <label for="guests">Number of guests (including you)</label>
+      <select id="guests" name="guests">
+        <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+      </select>
+      <label for="message">Message for Amari (optional)</label>
+      <textarea id="message" name="message" rows="3" placeholder="Write a little greeting…"></textarea>
+      <button class="submit-btn" type="submit">Send RSVP</button>
+      <p class="form-note">Thank you for responding! This sample form stores responses only in this browser. See the publishing notes for connecting a shared RSVP inbox or spreadsheet.</p>
+      <div id="response" role="status"></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div>Made with love for Amari Yuki Albino Demayo</div>
+  <div>Pink • Gold • A day filled with blessings</div>
+</footer>
+
+<script>
+  // Event date: December 19, 2026. Change the time if you know the event start time.
+  const eventDate = new Date("2026-12-19T00:00:00");
+  function updateCountdown() {
+    const diff = eventDate.getTime() - Date.now();
+    if (diff <= 0) {
+      document.querySelector(".timer").innerHTML = "<p>Today is Amari’s special day! ♡</p>";
+      return;
+    }
+    const values = {
+      days: Math.floor(diff / 86400000),
+      hours: Math.floor((diff % 86400000) / 3600000),
+      minutes: Math.floor((diff % 3600000) / 60000),
+      seconds: Math.floor((diff % 60000) / 1000)
+    };
+    Object.entries(values).forEach(([id, value]) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = String(value).padStart(2, "0");
+    });
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // Demo behavior: keeps RSVP entries in this visitor's browser only.
+  // To collect guests' responses centrally, connect a form service or backend.
+  document.getElementById("rsvpForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    const data = Object.fromEntries(new FormData(this).entries());
+    const entries = JSON.parse(localStorage.getItem("amariRsvpDemo") || "[]");
+    entries.push({ ...data, submittedAt: new Date().toISOString() });
+    localStorage.setItem("amariRsvpDemo", JSON.stringify(entries));
+    document.getElementById("response").textContent =
+      "Thank you, " + data.guestName + "! Your response is saved in this browser demo. ♡";
+    this.reset();
+  });
+</script>
+</body>
+</html>
